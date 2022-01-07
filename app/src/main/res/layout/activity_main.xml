@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MainActivity">
+
+    <!-- <io.alterac.blurkit.BlurLayout
+        android:id="@+id/blurLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/> -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/searchAndAcc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:backgroundTint="#f5f5f5"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="true">
+
+            <ImageView
+                android:id="@+id/searchItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="6dp"
+                android:src="@drawable/ic_baseline_search_24" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:src="@drawable/yt_logo"
+            android:layout_centerInParent="true"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/channelItem"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:backgroundTint="#f5f5f5"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="true">
+
+            <ImageView
+                android:id="@+id/channelItemLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo_demo" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/firstSingleVid"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/searchAndAcc" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shortsList"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/firstSingleVid" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/videoIdList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shortsList" />
+
+    <TextView
+        android:id="@+id/noMoreRes"
+        android:layout_width="match_parent"
+        android:text="No more Results"
+        android:layout_below="@+id/videoIdList"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
